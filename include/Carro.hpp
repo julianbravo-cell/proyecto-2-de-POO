@@ -1,4 +1,4 @@
-# programa once
+# pragma once
 # include <Vehiculo.hpp>
 
 class Carro : public Vehiculo {
@@ -10,4 +10,3 @@ class Carro : public Vehiculo {
     ~Carro();
     
 };
-//nn

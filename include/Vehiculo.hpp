@@ -1,6 +1,7 @@
-# program once
+# pragma once
 # include <iostream>
 # include <string>
+#include "Persona.hpp"
 
 using namespace std;
 
@@ -14,13 +15,13 @@ class Vehiculo {
 
     virtual ~Vehiculo();
 
-    virtual sting getTipo() = 0;
+    virtual string getTipo() = 0;
     string getPlaca() const;
     void setPlaca(string);
     Persona* getPropietario() const;
     void setPropietario(Persona* propietario);
 
-    virtual int cobrar()const= 0;
+    virtual int cobrar()const = 0;
     virtual string informacion() const;
 };
 ostream &operator <<(ostream &os, Vehiculo &Vehiculo);

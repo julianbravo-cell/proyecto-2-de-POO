@@ -7,13 +7,13 @@ using namespace std;
 class Persona{
     protected:
     string nombre;
-    string id;
+    string documento;
 
     public:
-    Persona(string nombre, string id);
+    Persona(string nombre, string documento);
     virtual ~Persona();
 
     virtual string getDescripcion() const = 0;
     string getNombre() const;
-    string getId() const;
+    string getDocumento() const;
 };

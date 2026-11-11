@@ -1,25 +1,16 @@
-# include<iostream>
-# include <string>
 
-using namespace std;
 #include "../include/Vehiculo.hpp"
 
-Vehiculo::Vehiculo(Persona* propietario, string placa) : placa(placa), propietario(propietario)
-{
-    if (placa.empty())
-    throw PlacaInvalidaException();
-}
+using namespace std;
+
+Vehiculo::Vehiculo(string placa, Persona* propietario) : placa(placa), propietario(propietario){}
 Vehiculo::~Vehiculo(){}
 
 string Vehiculo::getPlaca() const { return placa; }
-void Vehiculo::setPlaca(const string& p)
-{
-    if (p.empty())
-    throw PlacaInvalidaException();
-    placa = p;
-}
+void Vehiculo::setPlaca(string p){placa = p;}
+
 Persona* Vehiculo::getPropietario() const { return propietario; }
-void Vehiculo::setPropietario(Persona* p) { propietario = p; }
+void Vehiculo::setPropietario(Persona* pro) { propietario = pro; }
 
 string Vehiculo::informacion() const
 {
