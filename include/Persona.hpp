@@ -5,7 +5,8 @@
 using namespace std;
 
 class Persona{
-    protected:
+
+     protected:
     string nombre;
     string documento;
 
@@ -16,4 +17,6 @@ class Persona{
     virtual string getDescripcion() const = 0;
     string getNombre() const;
     string getDocumento() const;
+    virtual bool esVecino() const {return false;}
 };
+   

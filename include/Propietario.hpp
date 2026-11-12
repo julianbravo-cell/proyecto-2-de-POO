@@ -13,7 +13,8 @@ class Propietario : public Persona{
     Propietario(string nombre, string documento, bool esvecino);
     ~Propietario();
 
-    bool getEsvecino() const;
+    bool getEsVecino() const;
+    bool esVecino() const override;
     string getDescripcion() const override; 
 
 };

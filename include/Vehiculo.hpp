@@ -12,10 +12,9 @@ class Vehiculo {
 
     public:
     Vehiculo (string placa, Persona* propietario);
-
     virtual ~Vehiculo();
 
-    virtual string getTipo() = 0;
+    virtual string getTipo()const = 0;
     string getPlaca() const;
     void setPlaca(string);
     Persona* getPropietario() const;
