@@ -8,10 +8,10 @@ using namespace std;
 
 class ExcepcionPlaca : public std::runtime_error {
     public:
-    Excepcionplaca();
+    ExcepcionPlaca();
 };
 
-class Excepcionejes : public std::runtime_error {
+class ExcepcionEjes : public std::runtime_error {
 public:
     ExcepcionEjes();
 };

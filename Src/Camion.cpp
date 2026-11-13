@@ -24,6 +24,6 @@ string Camion::informacion() const {
 
 int Camion::cobrar() const {
     
-    int total = (8000 + 500 * DESENA) * ejes;
+    int total = (8000 + 100 * DESENA) * ejes;
     return total;
 }
