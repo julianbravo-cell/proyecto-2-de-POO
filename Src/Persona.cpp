@@ -5,3 +5,8 @@ Persona::~Persona(){};
 
 string Persona::getNombre() const { return nombre; }
 string Persona::getDocumento() const { return documento; }
+
+ostream &operator <<(ostream &os, const Persona &persona) {
+    os << "Nombre: " << persona.getNombre() << ", Documento: " << persona.getDocumento();
+    return os;
+}

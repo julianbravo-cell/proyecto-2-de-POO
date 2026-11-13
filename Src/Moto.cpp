@@ -9,7 +9,10 @@ string Moto::getTipo() const {return "Moto";}
 bool Moto::getAltoCilindraje() const {return cilindrada > 400 ? true : false;}
 
 string Moto::informacion() const {
-    return "Tipo: " + getTipo() + ", Placa: " + getPlaca() + ", Cilindraje: " + to_string(cilindrada) + ", Alto cilindraje: " + (getAltoCilindraje() ? "Si" : "No")+ ", Propietario: " + propietario->getNombre();
+    const string nombrePropietario = propietario != nullptr
+        ? propietario->getNombre()
+        : "no asignado";
+    return "Tipo: " + getTipo() + ", Placa: " + getPlaca() + ", Cilindraje: " + to_string(cilindrada) + ", Alto cilindraje: " + (getAltoCilindraje() ? "Si" : "No") + ", Propietario: " + nombrePropietario;
 }
 
 int Moto::cobrar() const {

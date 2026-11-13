@@ -3,14 +3,17 @@
 Carro::Carro(string placa, Persona* propietario, int pasajero) : Vehiculo(placa, propietario), pasajero(pasajero) {}
 Carro::~Carro(){}   
 
-void Carro::setPasajero(int pasajero) {pasajero = pasajero;}
+void Carro::setPasajero(int pasajero) {this->pasajero = pasajero;}
 int Carro::getPasajero() const {return pasajero;}
 string Carro::getTipo() const {return "Carro";}
 
 void Carro::subirPasajero() {pasajero++;}
 
 string Carro::informacion() const {
-    return getTipo() + " " + Vehiculo::informacion() + " Pasajeros: " + to_string(pasajero);
+    const string propietarioInfo = propietario != nullptr
+        ? propietario->getDescripcion()
+        : "PROPIETARIO: no asignado";
+    return getTipo() + " " + Vehiculo::informacion() + " Pasajeros: " + to_string(pasajero) + " " + propietarioInfo;
 }
 
 int Carro::cobrar() const {

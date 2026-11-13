@@ -19,4 +19,7 @@ class Persona{
     string getDocumento() const;
     virtual bool esVecino() const {return false;}
 };
-   
+ostream &operator <<(ostream &os, const Persona &persona);
+
+
+
